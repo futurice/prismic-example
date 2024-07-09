@@ -1,0 +1,33 @@
+{
+  "id": "product_list",
+  "type": "SharedSlice",
+  "name": "ProductListSection",
+  "description": "ProductList",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "products": {
+          "type": "Link",
+          "config": {
+            "label": "Products",
+            "select": "document"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
