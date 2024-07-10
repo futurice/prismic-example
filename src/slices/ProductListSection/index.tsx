@@ -15,8 +15,7 @@ const ProductList = ({ slice }: ProductListProps): JSX.Element => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      Placeholder component for product_list (variation: {slice.variation})
-      Slices
+      {slice.primary.title && <h2>{slice.primary.title}</h2>}
     </section>
   );
 };

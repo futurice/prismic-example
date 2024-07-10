@@ -23,15 +23,20 @@
           "type": "Image",
           "config": {
             "label": "Image",
-            "constraint": {},
+            "constraint": {
+              "width": 600,
+              "height": 600
+            },
             "thumbnails": []
           }
         },
-        "subtitle": {
-          "type": "Text",
+        "body": {
+          "type": "StructuredText",
           "config": {
-            "label": "Subtitle",
-            "placeholder": ""
+            "label": "Body",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "multi": "paragraph,hyperlink"
           }
         }
       },

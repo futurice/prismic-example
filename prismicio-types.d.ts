@@ -11,17 +11,6 @@ type HomepageDocumentDataSlicesSlice = ProductListSlice | HeroSlice;
  */
 interface HomepageDocumentData {
   /**
-   * Title field in *Homepage*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: homepage.title
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  title: prismic.KeyTextField;
-
-  /**
    * Slice Zone field in *Homepage*
    *
    * - **Field Type**: Slice Zone
@@ -80,7 +69,7 @@ export type HomepageDocument<Lang extends string = string> =
     Lang
   >;
 
-type ProductDocumentDataSlicesSlice = HeroSlice;
+type ProductDocumentDataSlicesSlice = HeroSlice | ProductListSlice;
 
 /**
  * Content for Product documents
@@ -96,6 +85,17 @@ interface ProductDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   title: prismic.KeyTextField;
+
+  /**
+   * Image field in *Product*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: product.image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
 
   /**
    * Slice Zone field in *Product*
@@ -183,14 +183,14 @@ export interface HeroSliceDefaultPrimary {
   image: prismic.ImageField<never>;
 
   /**
-   * Subtitle field in *Hero → Default → Primary*
+   * Body field in *Hero → Default → Primary*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: hero.default.primary.subtitle
-   * - **Documentation**: https://prismic.io/docs/field#key-text
+   * - **API ID Path**: hero.default.primary.body
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  subtitle: prismic.KeyTextField;
+  body: prismic.RichTextField;
 }
 
 /**
@@ -242,7 +242,17 @@ export interface ProductListSliceDefaultPrimary {
    * - **API ID Path**: product_list.default.primary.products
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  products: prismic.ContentRelationshipField;
+  products: prismic.ContentRelationshipField<"product">;
+
+  /**
+   * Subtitle field in *ProductListSection → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: product_list.default.primary.subtitle
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  subtitle: prismic.KeyTextField;
 }
 
 /**

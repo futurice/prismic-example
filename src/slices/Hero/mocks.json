@@ -9,32 +9,36 @@
 				"type": "Text"
 			},
 			"image": {
+				"__TYPE__": "ImageContent",
 				"origin": {
 					"id": "main",
-					"url": "https://images.unsplash.com/photo-1571126770897-2d612d1f7b89",
-					"width": 3456,
-					"height": 3456
+					"url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa",
+					"width": 2747,
+					"height": 4120
 				},
-				"url": "https://images.unsplash.com/photo-1571126770897-2d612d1f7b89",
-				"width": 3456,
-				"height": 3456,
+				"url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa?rect=0%2C687%2C2747%2C2747&w=600&h=600",
+				"width": 600,
+				"height": 600,
 				"edit": {
 					"zoom": 1,
 					"crop": {
 						"x": 0,
-						"y": 0
+						"y": 687
 					},
 					"background": "transparent"
 				},
-				"credits": null,
-				"alt": null,
-				"__TYPE__": "ImageContent",
 				"thumbnails": {}
 			},
-			"subtitle": {
-				"__TYPE__": "FieldContent",
-				"value": "stove",
-				"type": "Text"
+			"body": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Ea officia ea elit ipsum pariatur consectetur enim amet occaecat tempor exercitation."
+						}
+					}
+				]
 			}
 		},
 		"items": []

@@ -23,7 +23,17 @@
           "type": "Link",
           "config": {
             "label": "Products",
-            "select": "document"
+            "select": "document",
+            "customtypes": [
+              "product"
+            ]
+          }
+        },
+        "subtitle": {
+          "type": "Text",
+          "config": {
+            "label": "Subtitle",
+            "placeholder": ""
           }
         }
       },
