@@ -8,17 +8,30 @@
 				"value": "piano",
 				"type": "Text"
 			},
-			"products": {
-				"__TYPE__": "LinkContent",
-				"value": {
-					"__TYPE__": "DocumentLink",
-					"id": "mock_document_id"
-				}
-			},
 			"subtitle": {
 				"__TYPE__": "FieldContent",
 				"value": "pupil",
 				"type": "Text"
+			},
+			"products": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"product",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "DocumentLink",
+										"id": "mock_document_id"
+									}
+								}
+							]
+						]
+					}
+				]
 			}
 		},
 		"items": []

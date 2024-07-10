@@ -1,0 +1,71 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"image": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1",
+					"width": 5616,
+					"height": 3744
+				},
+				"url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?rect=936%2C0%2C3744%2C3744&w=400&h=400",
+				"width": 400,
+				"height": 400,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 936,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "popular",
+				"type": "Text"
+			},
+			"price": {
+				"__TYPE__": "FieldContent",
+				"value": "93",
+				"type": "Number"
+			},
+			"colourOptions": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"colour",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "consider",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Aute minim consequat et nulla est minim ullamco magna incididunt ex et deserunt in."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]
