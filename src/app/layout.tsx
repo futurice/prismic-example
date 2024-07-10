@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { PrismicPreview } from "@prismicio/next";
 import { repositoryName } from "@/prismicio";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "Prismic with NextJS experiment",
@@ -16,6 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <Header />
         <main>{children}</main>
         <PrismicPreview repositoryName={repositoryName} />
       </body>

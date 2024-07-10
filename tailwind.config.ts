@@ -44,7 +44,12 @@ const config: Config = {
       72: '288px',
       80: '320px',
       96: '384px',
-    }
+    },
+    extend: {
+      borderWidth: {
+        1: '1px',
+      },
+    },
   },
   plugins: [],
 };
