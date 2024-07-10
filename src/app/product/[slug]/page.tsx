@@ -13,9 +13,5 @@ export default async function Product({ params: { slug } }: ProductParams) {
 
   const { data } = await client.getByUID("product", slug);
 
-  return (
-    <main>
-      <SliceZone slices={data.slices} components={components} />
-    </main>
-  );
+  return <SliceZone slices={data.slices} components={components} />;
 }

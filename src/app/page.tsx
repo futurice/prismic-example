@@ -7,9 +7,5 @@ export default async function Home() {
 
   const { data } = await client.getSingle("homepage");
 
-  return (
-    <main>
-      <SliceZone slices={data.slices} components={components} />
-    </main>
-  );
+  return <SliceZone slices={data.slices} components={components} />;
 }
