@@ -316,6 +316,21 @@ export interface ProductListSliceDefaultPrimaryProductsItem {
 }
 
 /**
+ * Item in *ProductListSection → Highlighted → Primary → Products*
+ */
+export interface ProductListSliceHighlightedPrimaryProductsItem {
+  /**
+   * product field in *ProductListSection → Highlighted → Primary → Products*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: product_list.highlighted.primary.products[].product
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  product: prismic.ContentRelationshipField<"product">;
+}
+
+/**
  * Primary content in *ProductListSection → Default → Primary*
  */
 export interface ProductListSliceDefaultPrimary {
@@ -328,16 +343,6 @@ export interface ProductListSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   title: prismic.KeyTextField;
-
-  /**
-   * Subtitle field in *ProductListSection → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: product_list.default.primary.subtitle
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  subtitle: prismic.KeyTextField;
 
   /**
    * Products field in *ProductListSection → Default → Primary*
@@ -366,9 +371,61 @@ export type ProductListSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
+ * Primary content in *ProductListSection → Highlighted → Primary*
+ */
+export interface ProductListSliceHighlightedPrimary {
+  /**
+   * Title field in *ProductListSection → Highlighted → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: product_list.highlighted.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Subtitle field in *ProductListSection → Highlighted → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: product_list.highlighted.primary.subtitle
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  subtitle: prismic.KeyTextField;
+
+  /**
+   * Products field in *ProductListSection → Highlighted → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: product_list.highlighted.primary.products[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  products: prismic.GroupField<
+    Simplify<ProductListSliceHighlightedPrimaryProductsItem>
+  >;
+}
+
+/**
+ * Highlighted variation for ProductListSection Slice
+ *
+ * - **API ID**: `highlighted`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ProductListSliceHighlighted = prismic.SharedSliceVariation<
+  "highlighted",
+  Simplify<ProductListSliceHighlightedPrimary>,
+  never
+>;
+
+/**
  * Slice variation for *ProductListSection*
  */
-type ProductListSliceVariation = ProductListSliceDefault;
+type ProductListSliceVariation =
+  | ProductListSliceDefault
+  | ProductListSliceHighlighted;
 
 /**
  * ProductListSection Shared Slice
@@ -411,8 +468,11 @@ declare module "@prismicio/client" {
       ProductListSlice,
       ProductListSliceDefaultPrimaryProductsItem,
       ProductListSliceDefaultPrimary,
+      ProductListSliceHighlightedPrimaryProductsItem,
+      ProductListSliceHighlightedPrimary,
       ProductListSliceVariation,
       ProductListSliceDefault,
+      ProductListSliceHighlighted,
     };
   }
 }

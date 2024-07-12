@@ -49,11 +49,11 @@ const ProductList = async ({ slice }: ProductListProps) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="px-10 pb-32"
+      className={`px-10 pb-32 pt-10 ${slice.variation === "highlighted" && "bg-gray-100"}`}
     >
       <div className="max-w-[1200px] mx-auto">
         <h2 className="text-4xl">{slice.primary.title}</h2>
-        {slice.primary.subtitle && (
+        {slice.variation === "highlighted" && slice.primary.subtitle && (
           <p className="text-2xl my-2">{slice.primary.subtitle}</p>
         )}
         <ul className="flex gap-10 justify-between mt-10">

@@ -8,9 +8,41 @@
 				"value": "piano",
 				"type": "Text"
 			},
+			"products": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"product",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "DocumentLink",
+										"id": "mock_document_id"
+									}
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "highlighted",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "organized",
+				"type": "Text"
+			},
 			"subtitle": {
 				"__TYPE__": "FieldContent",
-				"value": "pupil",
+				"value": "transportation",
 				"type": "Text"
 			},
 			"products": {
@@ -34,6 +66,11 @@
 				]
 			}
 		},
-		"items": []
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
 	}
 ]

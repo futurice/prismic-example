@@ -11,7 +11,7 @@ interface ProductCardProps {
 
 const ProductCard = ({ image, title, price, uid }: ProductCardProps) => {
   return (
-    <li className="max-w-72 p-10 shadow-lg hover:scale-105 transition-transform">
+    <li className="max-w-72 p-10 shadow-lg hover:scale-105 transition-transform bg-white">
       <Link href={`/product/${uid}`}>
         <PrismicNextImage
           // className="w-96 h-96 object-cover m-auto"
