@@ -158,7 +158,7 @@ export interface HeroSliceDefaultPrimary {
    * - **API ID Path**: hero.default.primary.image
    * - **Documentation**: https://prismic.io/docs/field#image
    */
-  image: prismic.ImageField<never>;
+  image: prismic.ImageField<"mobile">;
 
   /**
    * Body field in *Hero → Default → Primary*

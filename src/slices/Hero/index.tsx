@@ -15,17 +15,17 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="p-10 flex gap-10 justify-center"
+      className="px-10"
     >
-      <div className="w-[600px]">
+      <div className="py-10 max-w-[1200px] mx-auto flex flex-col items-center justify-center md:flex-row gap-10">
         <PrismicNextImage
-          className="w-96 h-96 object-cover m-auto"
+          className="max-h-96 object-cover m-auto"
           field={slice.primary.image}
         />
-      </div>
-      <div className="flex flex-col justify-center w-[600px]">
-        <h1 className="text-6xl">{slice.primary.title}</h1>
-        <PrismicRichText field={slice.primary.body} />
+        <div className="flex flex-col justify-center max-w-[600px]">
+          <h1 className="text-6xl">{slice.primary.title}</h1>
+          <PrismicRichText field={slice.primary.body} />
+        </div>
       </div>
     </section>
   );
