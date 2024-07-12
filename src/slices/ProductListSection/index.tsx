@@ -2,7 +2,7 @@ import { createClient } from "@/prismicio";
 import { Content, isFilled } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import { ProductDocument, Simplify } from "../../../prismicio-types";
-import ProductCard from "@/components/ProductCard";
+import ProductCard from "@/slices/ProductListSection/ProductCard";
 
 /**
  * Props for `ProductList`.
