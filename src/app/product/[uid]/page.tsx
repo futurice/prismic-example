@@ -15,3 +15,13 @@ export default async function Product({ params: { uid } }: ProductParams) {
 
   return <SliceZone slices={data.slices} components={components} />;
 }
+
+export async function generateStaticPaths() {
+  const client = createClient();
+
+  const pages = await client.getAllByType("product");
+
+  return pages.map((page) => ({
+    uid: page.uid,
+  }));
+}
