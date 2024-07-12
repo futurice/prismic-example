@@ -4,14 +4,14 @@ import { components } from "@/slices";
 
 interface ProductParams {
   params: {
-    slug: string;
+    uid: string;
   };
 }
 
-export default async function Product({ params: { slug } }: ProductParams) {
+export default async function Product({ params: { uid } }: ProductParams) {
   const client = createClient();
 
-  const { data } = await client.getByUID("product", slug);
+  const { data } = await client.getByUID("product", uid);
 
   return <SliceZone slices={data.slices} components={components} />;
 }
