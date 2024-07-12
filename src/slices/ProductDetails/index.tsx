@@ -10,7 +10,11 @@ export type ProductDetailsProps =
   SliceComponentProps<Content.ProductDetailsSlice>;
 
 const components: JSXMapSerializer = {
-  paragraph: ({ children }) => <p className="text-lg my-4">{children}</p>,
+  paragraph: ({ children }) => (
+    <p className="text-lg my-4 [&>.center-align]:block [&>.center-align]:text-center [&>.center-align]:italic [&>.right-align]:block [&>.right-align]:text-right">
+      {children}
+    </p>
+  ),
   strong: ({ children }) => <strong className="font-bold">{children}</strong>,
   em: ({ children }) => <em className="italic">{children}</em>,
   list: ({ children }) => <ul className="list-disc pl-6 my-4">{children}</ul>,

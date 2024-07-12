@@ -56,7 +56,7 @@ const ProductList = async ({ slice }: ProductListProps) => {
         {slice.variation === "highlighted" && slice.primary.subtitle && (
           <p className="text-2xl my-2">{slice.primary.subtitle}</p>
         )}
-        <ul className="flex gap-10 justify-between mt-10">
+        <ul className="flex gap-10 mt-10 flex-wrap">
           {products.results.map((product) => {
             const cardDetails = product.data.slices.find(
               (slice) => slice.slice_type === "product_details"
